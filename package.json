@@ -1,0 +1,102 @@
+{
+	"name": "paste-ali-oss",
+	"displayName": "paste-ali-oss",
+	"description": "Paste To Aliyun Oss",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.61.0"
+	},
+	"publisher": "duoli",
+	"categories": [
+		"Other"
+	],
+	"repository": "https://github.com/imvkmark/vscode-paste-ali-oss",
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"main": "./src/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.paste.ali.oss",
+				"title": "Paste To Aliyun Oss"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.paste.ali.oss",
+				"key": "ctrl+cmd+v",
+				"mac": "ctrl+cmd+v",
+				"when": "editorTextFocus && editorLangId == 'markdown'"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Paste To AliOss Setting",
+			"properties": {
+				"paste-ali-oss.region": {
+					"type": "string",
+					"default": "",
+					"description": "地区，如 oss-cn-beijing.aliyuncs.com 中的 oss-cn-beijing 就是 region"
+				},
+				"paste-ali-oss.accessKeyId": {
+					"type": "string",
+					"default": "",
+					"description": "accessKeyId（RAM中生成的accessKeyId）"
+				},
+				"paste-ali-oss.accessKeySecret": {
+					"type": "string",
+					"default": "",
+					"description": "accessKeySecret（RAM中生成的accessKeySecret）"
+				},
+				"paste-ali-oss.bucket": {
+					"type": "string",
+					"default": "",
+					"description": "输入你的 bucket 名称"
+				},
+				"paste-ali-oss.prefix": {
+					"type": "string",
+					"default": "",
+					"description": "图片存储目录。例如希望的图片地址为 http://${你的域名}/prefix/filename.png，则填写 prefix）"
+				},
+				"paste-ali-oss.defaultName": {
+					"type": "string",
+					"default": "",
+					"description": "默认图像名称. 这个配置会传递到 dayjs 库的 format 函数, 文档地址 : https://dayjs.gitee.io/docs/zh-CN/display/format"
+				},
+				"paste-ali-oss.domain": {
+					"type": "string",
+					"default": "",
+					"description": "阿里云oss域名，建议绑定自定义域名并开启CDN加速"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "16.11.1",
+		"@types/vscode": "^1.61.0",
+		"@typescript-eslint/eslint-plugin": "^5.1.0",
+		"@typescript-eslint/parser": "^5.1.0",
+		"@vscode/test-electron": "^1.6.2",
+		"eslint": "^8.0.1",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.1",
+		"typescript": "^4.4.3"
+	},
+	"dependencies": {
+		"ali-oss": "^6.0.2",
+		"co": "4",
+		"dayjs": "^1.10.7",
+		"shelljs": "^0.8.3"
+	}
+}
