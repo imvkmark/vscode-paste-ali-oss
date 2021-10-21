@@ -1,6 +1,8 @@
 # Paste To Aliyun Oss
 
-VSCode 扩展插件，在 Markdown 类型文件编辑过程中，支持截图上传到阿里云 OSS 并将图片粘贴到编辑器中,
+VSCode 扩展插件，在 Markdown 类型文件编辑过程中，支持截图上传到阿里云 OSS 并将图片粘贴到编辑器中
+
+[Paste To Aliyun Oss](https://marketplace.visualstudio.com/items?itemName=duoli.paste-ali-oss)
 
 ## 安装
 
