@@ -1,8 +1,8 @@
 {
 	"name": "paste-ali-oss",
-	"displayName": "paste-ali-oss",
-	"description": "Paste To Aliyun Oss",
-	"version": "1.0.0",
+	"displayName": "Paste To Aliyun Oss",
+	"description": "Paste Image To Aliyun Oss",
+	"version": "1.0.1",
 	"engines": {
 		"vscode": "^1.61.0"
 	},
@@ -19,7 +19,7 @@
 		"commands": [
 			{
 				"command": "extension.paste.ali.oss",
-				"title": "Paste To Aliyun Oss"
+				"title": "Paste Image To Aliyun Oss"
 			}
 		],
 		"keybindings": [
@@ -32,7 +32,7 @@
 		],
 		"configuration": {
 			"type": "object",
-			"title": "Paste To AliOss Setting",
+			"title": "Paste Image To AliOss Setting",
 			"properties": {
 				"paste-ali-oss.region": {
 					"type": "string",

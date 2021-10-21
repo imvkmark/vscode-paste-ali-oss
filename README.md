@@ -12,6 +12,8 @@ VSCode 扩展插件，在 Markdown 类型文件编辑过程中，支持截图上
 
 截图后使用（ `ctrl + cmd + v` ）上传到 Aliyun 并粘贴到文章中
 
+![使用说明](https://file.wulicode.com/note/images/save-to-aliyun.gif)
+
 ## 参数设置
 
 -   `region`
