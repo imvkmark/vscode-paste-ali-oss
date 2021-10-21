@@ -4,9 +4,9 @@ VSCode 扩展插件，在 Markdown 类型文件编辑过程中，支持截图上
 
 ## 安装
 
-在插件应用商店搜索 `paste-ali-oss` ，点击 `install` 安装。如图:
+在插件应用商店搜索 `paste-ali-oss` ，点击安装。如图:
 
-![插件检索及安装](https://pic.lixl.cn/2020/15da665cf0d5309abc2b054508b61d76.png)
+![安装](https://file.wulicode.com/static/paste-ali-oss/install.png)
 
 ## 使用
 
